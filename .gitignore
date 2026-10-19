@@ -7,6 +7,9 @@ data/
 secrets/
 *.sqlite*
 auth.json
+__pycache__/
+*.pyc
+graphify-out/cache/
 pilot/external-footage/*.mpg
 pilot/external-footage/*.webm
 pilot/external-footage/*.ogv
