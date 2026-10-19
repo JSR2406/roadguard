@@ -1,0 +1,31 @@
+{
+  "scope": "Synthetic pixel detector -> enrolled source API -> fusion -> rider route alerts; NOT trained-model or real-road validation",
+  "fixtureManifestSha256": "f50b9ff50ff375ab6b2da91824964e9102e1a8757c15282bc2fecf0a4caed163",
+  "proposals": 99,
+  "accepted": 99,
+  "independentSourceCount": 1,
+  "hazardClusters": 3,
+  "allClustersProvisional": true,
+  "correctRouteAlerts": 2,
+  "parallelRouteAlerts": 0,
+  "falsePositivePolicy": "Night hard-negative detections retained, not hidden; they create a provisional cluster at explicit fixture offset 950 m",
+  "timestamps": "All fixture observations replayed at a common synthetic capture epoch; not measured streaming latency",
+  "alerts": [
+    {
+      "hazardId": "hazard:source:synthetic-fixture-camera:day-pothole.avi%3A0%3A0",
+      "distanceM": 170,
+      "warningDistanceM": 380,
+      "severity": "high",
+      "provisional": true,
+      "message": "Provisional — unverified high pothole 170 m ahead. Two-wheeler caution: allow extra space; avoid sudden manoeuvres."
+    },
+    {
+      "hazardId": "hazard:source:synthetic-fixture-camera:day-animal.avi%3A0%3A0",
+      "distanceM": 230,
+      "warningDistanceM": 380,
+      "severity": "high",
+      "provisional": true,
+      "message": "Provisional — unverified high animal on road 230 m ahead. Two-wheeler caution: allow extra space; avoid sudden manoeuvres."
+    }
+  ]
+}

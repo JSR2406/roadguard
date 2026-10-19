@@ -1,0 +1,17 @@
+Title: Transmission Gully Motorway driving in fog 132042
+Author: Panamitsu
+Source: https://commons.wikimedia.org/wiki/File:Transmission_Gully_Motorway_driving_in_fog_132042.mpg
+Licence: CC BY-SA 4.0
+Licence URL: https://creativecommons.org/licenses/by-sa/4.0/
+Changes: Downloaded unchanged; local filename changed.
+SHA-256: 2a161645e43f74407484ff72ac03fdf09b355b5c735f7c6766081020d69069a2
+Notice: External fog-road video, not Pune/PCMC footage; no ground-truth annotations; no accuracy or safety claim.
+
+Title: Cars Moving into pothole.webm
+Author: Amuzujoe
+Source: https://commons.wikimedia.org/wiki/File:Cars_Moving_into_pothole.webm
+Licence: CC BY-SA 4.0
+Licence URL: https://creativecommons.org/licenses/by-sa/4.0/
+Changes: Downloaded unchanged; local filename changed.
+SHA-256: 2327fb7ccacc68fab10a45753d868e09a6c9855ac0acae486aeefec15265f82d
+Notice: External Kumasi, Ghana pothole video; no frame-level ground truth; no Pune/local or safety claim.

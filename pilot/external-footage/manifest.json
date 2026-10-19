@@ -1,0 +1,38 @@
+{
+  "manifestVersion": "1.0",
+  "datasetId": "roadguard-external-open-footage-smoke",
+  "locality": "Kose, Estonia / external open footage; not Pune",
+  "purpose": "Negative-only detector decode smoke test; not local training or accuracy validation",
+  "assets": [
+    {
+      "assetId": "transmission-gully-fog-132042",
+      "localPath": "pilot/external-footage/transmission-gully-fog.mpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Transmission_Gully_Motorway_driving_in_fog_132042.mpg",
+      "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Transmission_Gully_Motorway_driving_in_fog_132042.mpg",
+      "author": "Panamitsu",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "sha256": "2a161645e43f74407484ff72ac03fdf09b355b5c735f7c6766081020d69069a2",
+      "changes": "Downloaded unchanged; renamed local file only",
+      "labels": "none",
+      "commercialUse": "permitted by licence subject to attribution/share-alike and third-party rights review",
+      "puneLocal": false,
+      "privacyReview": "required before redistribution or training"
+    },
+    {
+      "assetId": "cars-moving-into-pothole-ghana",
+      "localPath": "pilot/external-footage/cars-moving-into-pothole.webm",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Cars_Moving_into_pothole.webm",
+      "downloadUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Cars_Moving_into_pothole.webm?download=1",
+      "author": "Amuzujoe",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "sha256": "2327fb7ccacc68fab10a45753d868e09a6c9855ac0acae486aeefec15265f82d",
+      "changes": "Downloaded unchanged; local filename changed",
+      "labels": "none; page describes cars entering a pothole but no frame-level boxes",
+      "commercialUse": "permitted by licence subject to attribution/share-alike and third-party rights review",
+      "puneLocal": false,
+      "privacyReview": "required before redistribution or training"
+    }
+  ]
+}

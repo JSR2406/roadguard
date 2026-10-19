@@ -1,0 +1,62 @@
+{
+  "schema": "roadguard.dataset-report.v1",
+  "roadSafetyValidated": false,
+  "root": "vision\\artifacts\\fixtures",
+  "images": 2,
+  "annotations": 0,
+  "labels": {},
+  "missing_annotations": [
+    "vision\\artifacts\\fixtures\\asset-animal.png",
+    "vision\\artifacts\\fixtures\\asset-pothole.png"
+  ],
+  "invalid": [],
+  "duplicates": [],
+  "records": [
+    {
+      "image": "vision\\artifacts\\fixtures\\asset-animal.png",
+      "source": "RDD",
+      "country": "unknown",
+      "group": "rdd|unknown|asset-animal",
+      "annotations": [],
+      "valid": true,
+      "width": 53,
+      "height": 40
+    },
+    {
+      "image": "vision\\artifacts\\fixtures\\asset-pothole.png",
+      "source": "RDD",
+      "country": "unknown",
+      "group": "rdd|unknown|asset-pothole",
+      "annotations": [],
+      "valid": true,
+      "width": 61,
+      "height": 29
+    }
+  ],
+  "splits": {
+    "train": [
+      {
+        "image": "vision\\artifacts\\fixtures\\asset-pothole.png",
+        "source": "RDD",
+        "country": "unknown",
+        "group": "rdd|unknown|asset-pothole",
+        "annotations": [],
+        "valid": true,
+        "width": 61,
+        "height": 29
+      },
+      {
+        "image": "vision\\artifacts\\fixtures\\asset-animal.png",
+        "source": "RDD",
+        "country": "unknown",
+        "group": "rdd|unknown|asset-animal",
+        "annotations": [],
+        "valid": true,
+        "width": 53,
+        "height": 40
+      }
+    ],
+    "val": [],
+    "test": []
+  }
+}

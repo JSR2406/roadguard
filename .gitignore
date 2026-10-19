@@ -1,0 +1,13 @@
+node_modules/
+dist/
+*.log
+.env*
+!.env.example
+data/
+secrets/
+*.sqlite*
+auth.json
+pilot/external-footage/*.mpg
+pilot/external-footage/*.webm
+pilot/external-footage/*.ogv
+pilot/external-footage/*.mp4

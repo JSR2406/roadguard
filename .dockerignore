@@ -1,0 +1,12 @@
+node_modules
+dist
+.git
+.env*
+data
+secrets
+*.sqlite*
+auth.json
+vision/.venv
+vision/artifacts
+graphify-out
+tests

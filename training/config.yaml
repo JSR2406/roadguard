@@ -1,0 +1,9 @@
+permitted: false
+data: data/roadguard.yaml
+model: yolov8n.pt
+modelLicenseVerified: false
+epochs: 10
+imgsz: 640
+project: runs
+name: roadguard
+seed: 42

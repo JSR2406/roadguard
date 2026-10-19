@@ -1,0 +1,13 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+title: RoadGuard dataset inspection report
+type: object
+required: [schema, roadSafetyValidated, images, annotations, records]
+properties:
+  schema: {const: roadguard.dataset-report.v1}
+  roadSafetyValidated: {const: false}
+  images: {type: integer, minimum: 0}
+  annotations: {type: integer, minimum: 0}
+  records: {type: array}
+  invalid: {type: array}
+  duplicates: {type: array}
+  missing_annotations: {type: array}

@@ -1,0 +1,16 @@
+{
+  "scope": "Synthetic procedural fixtures only; NOT trained AI or real-road performance",
+  "detector": "SyntheticBaseline",
+  "trained": false,
+  "manifest_sha256": "f50b9ff50ff375ab6b2da91824964e9102e1a8757c15282bc2fecf0a4caed163",
+  "videos": 8,
+  "frames": 192,
+  "iou_threshold": 0.5,
+  "overall": { "tp": 96, "fp": 3, "fn": 0, "precision": 0.9696969696969697, "recall": 1.0, "mean_matched_iou": 0.9592764928703814 },
+  "day": { "frames": 96, "tp": 48, "fp": 0, "fn": 0, "precision": 1.0, "recall": 1.0 },
+  "night": { "frames": 96, "tp": 48, "fp": 3, "fn": 0, "precision": 0.9411764705882353, "recall": 1.0 },
+  "empty_negatives": { "frames": 48, "fp": 0 },
+  "hard_negatives": { "frames": 48, "fp": 3 },
+  "real_model_inference": "not performed; no permitted trained weights configured",
+  "night_limitation": "38 percent brightness procedural drawings; not real headlights, glare, occlusion, rain or road footage"
+}

@@ -1,0 +1,16 @@
+{
+  "scope": "Openly licensed external video, unlabeled negative-only smoke test; no precision/recall or safety claim",
+  "file": "pilot\\external-footage\\cars-moving-into-pothole.webm",
+  "sha256": "2327fb7ccacc68fab10a45753d868e09a6c9855ac0acae486aeefec15265f82d",
+  "framesDecoded": 621,
+  "predictions": 3996,
+  "predictionsByClass": {
+    "pothole": 378,
+    "animal": 3618
+  },
+  "detector": {
+    "kind": "synthetic-only color and shape rules",
+    "trained": false
+  },
+  "groundTruth": "unavailable; manual frame annotation required before accuracy evaluation"
+}

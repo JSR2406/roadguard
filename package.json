@@ -1,0 +1,37 @@
+{
+  "name": "roadguard-pilot",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc --noEmit && vite build",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test tests/*.test.ts",
+    "start": "node server/index.mjs",
+    "provision": "node server/provision.mjs",
+    "test:ui": "vitest run --environment jsdom --pool=threads --maxWorkers=1 tests/ui.test.tsx tests/i18n.test.tsx",
+    "test:pipeline": "node server/simulation-smoke.mjs"
+    ,"pilot:validate-captures": "tsx pilot/cli.ts validate-captures"
+    ,"pilot:validate-annotations": "tsx pilot/cli.ts validate-annotations"
+    ,"pilot:queue": "tsx pilot/cli.ts queue"
+  },
+  "dependencies": {
+    "lucide-react": "^0.468.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^16.3.3",
+    "@testing-library/user-event": "^14.6.8",
+    "@types/jsdom": "^30.0.0",
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "jsdom": "^29.1.1",
+    "tsx": "^4.20.0",
+    "typescript": "^5.8.3",
+    "vite": "^7.1.0",
+    "vitest": "^5.0.5"
+  }
+}

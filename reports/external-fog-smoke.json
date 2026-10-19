@@ -1,0 +1,14 @@
+{
+  "scope": "Openly licensed external video, unlabeled negative-only smoke test; no precision/recall or safety claim",
+  "asset": "Transmission Gully Motorway driving in fog 132042",
+  "sourcePage": "https://commons.wikimedia.org/wiki/File:Transmission_Gully_Motorway_driving_in_fog_132042.mpg",
+  "author": "Panamitsu",
+  "license": "CC BY-SA 4.0",
+  "sha256": "2a161645e43f74407484ff72ac03fdf09b355b5c735f7c6766081020d69069a2",
+  "puneLocal": false,
+  "framesDecoded": 125,
+  "predictions": 0,
+  "predictionsByClass": { "pothole": 0, "animal": 0 },
+  "detector": { "kind": "synthetic-only color and shape rules", "trained": false },
+  "groundTruth": "unavailable; manual frame annotation required before accuracy evaluation"
+}

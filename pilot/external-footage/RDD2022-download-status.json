@@ -1,0 +1,27 @@
+{
+  "dataset": "RDD2022 India subset",
+  "metadataSource": "https://api.figshare.com/v2/articles/21431547",
+  "datasetLicenceObserved": "CC BY 4.0 in Figshare API metadata",
+  "fullArchive": {
+    "name": "RDD2022_released_through_CRDDC2022.zip",
+    "figshareFileId": 38030910,
+    "sizeBytes": 13264172619,
+    "md5": "b62bd51d2ffcfaa76c60f234f0cc2bb3",
+    "downloadUrl": "https://ndownloader.figshare.com/files/38030910",
+    "status": "not-downloaded",
+    "reason": "The local drive had approximately 6.1 GB free; the full 13.26 GB archive cannot be safely downloaded here. No partial archive was started."
+  },
+  "indiaDirectMirror": {
+    "url": "https://bigdatacup.s3.ap-northeast-1.amazonaws.com/2022/CRDDC2022/RDD2022/Country_Specific_Data_CRDDC2022/RDD2022_India.zip",
+    "status": "not-downloaded",
+    "reason": "The supplied S3 URL returned HTTP 403 in this environment; access was not bypassed."
+  },
+  "fileList": {
+    "figshareFileId": 38030826,
+    "url": "https://ndownloader.figshare.com/files/38030826",
+    "sha256": "56180db30512f57ae8e63af7ae5bbe391ad9f8617f8c64e8064b2dd084b638b4",
+    "indiaPathLinesObserved": 17372,
+    "status": "metadata-downloaded"
+  },
+  "trainingStatus": "blocked-until-archive-access-and-licence-scope-review"
+}

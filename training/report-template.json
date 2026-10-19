@@ -1,0 +1,14 @@
+{
+  "schema": "roadguard.dataset-report.v1",
+  "roadSafetyValidated": false,
+  "root": "",
+  "images": 0,
+  "annotations": 0,
+  "labels": {},
+  "missing_annotations": [],
+  "invalid": [],
+  "duplicates": [],
+  "provenance": {"dataset": "", "source_url": "", "license": "", "retrieved_at": "", "notes": ""},
+  "records": [],
+  "splits": {"train": [], "val": [], "test": []}
+}

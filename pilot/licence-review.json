@@ -1,0 +1,68 @@
+{
+  "reviewVersion": "1.0",
+  "reviewedAt": "2026-10-19",
+  "reviewer": "RoadGuard pilot workflow",
+  "commercialReleaseApproved": false,
+  "assets": [
+    {
+      "id": "rdd2022-india",
+      "name": "RDD2022 / CRDDC India subset",
+      "assetKind": ["images", "annotations", "metadata"],
+      "sourceUrl": "https://figshare.com/articles/dataset/RDD2022_-_The_multi-national_Road_Damage_Dataset_released_through_CRDDC_2022/21431547",
+      "termsUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseObserved": "CC BY 4.0 in Figshare API metadata",
+      "commercialTraining": "potentially-permitted",
+      "commercialRedistribution": "requires-scope-review",
+      "weightsIncluded": false,
+      "attributionRequired": true,
+      "status": "conditional-review",
+      "openQuestions": ["Confirm CC BY scope for every India-subset image, annotation and contributor material.", "Record exact archive version and checksum before use.", "Review any separately sourced weights; dataset record does not license them automatically."],
+      "citation": "Arya et al., RDD2022, Figshare, https://doi.org/10.6084/m9.figshare.21431547.v1"
+    },
+    {
+      "id": "coco",
+      "name": "COCO Common Objects in Context",
+      "assetKind": ["annotations", "images", "software"],
+      "sourceUrl": "https://cocodataset.org/#home",
+      "termsUrl": "https://cocodataset.org/#termsofuse",
+      "licenseObserved": "Annotations CC BY 4.0; COCO states it does not own image copyrights and points users to Flickr/source terms",
+      "commercialTraining": "annotations-permitted-under-cc-by; images-not-blanket-cleared",
+      "commercialRedistribution": "images-require-per-image-rights-review",
+      "weightsIncluded": false,
+      "attributionRequired": true,
+      "status": "conditional-review",
+      "openQuestions": ["Review source licence for every selected image subset.", "Review licence of each model checkpoint separately.", "Retain COCO attribution and image-level rights records."],
+      "citation": "COCO Consortium, https://cocodataset.org/"
+    },
+    {
+      "id": "bdd100k",
+      "name": "BDD100K driving dataset",
+      "assetKind": ["videos", "images", "annotations", "metadata"],
+      "sourceUrl": "https://github.com/bdd100k/bdd100k",
+      "termsUrl": "https://bdd-data.berkeley.edu/",
+      "licenseObserved": "Repository code BSD-3-Clause; dataset-wide video/image/annotation commercial terms not verified from accessible official data portal",
+      "commercialTraining": "unverified",
+      "commercialRedistribution": "unverified",
+      "weightsIncluded": false,
+      "attributionRequired": true,
+      "status": "blocked-pending-terms",
+      "openQuestions": ["Obtain current official data-portal terms.", "Confirm commercial training and derived-model rights.", "Confirm annotation/metadata redistribution terms."],
+      "citation": "Yu et al., BDD100K, CVPR 2020, project README citation"
+    },
+    {
+      "id": "roadguard-procedural-fixtures",
+      "name": "RoadGuard procedural video fixtures",
+      "assetKind": ["generated-video", "generated-assets", "code"],
+      "sourceUrl": "workspace:vision/generate.py",
+      "termsUrl": "workspace:vision/LICENSE",
+      "licenseObserved": "Original procedural assets/code under repository MIT notice",
+      "commercialTraining": "permitted-for-fixtures",
+      "commercialRedistribution": "permitted-with-notice",
+      "weightsIncluded": false,
+      "attributionRequired": true,
+      "status": "fixture-only",
+      "openQuestions": ["Cannot represent Pune/local road conditions or independent footage."],
+      "citation": "RoadGuard generated fixture assets; MIT notice in vision/LICENSE"
+    }
+  ]
+}
