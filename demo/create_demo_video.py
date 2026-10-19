@@ -116,7 +116,7 @@ def main() -> None:
             make_slides(work)
         audio = work / "voiceover.wav"
         create_audio(audio)
-        command = [ffmpeg, "-y", "-framerate", "2", "-i", str(work / "frame-%04d.png"), "-i", str(audio), "-c:v", "libx264", "-pix_fmt", "yuv420p", "-c:a", "aac", "-shortest", str(OUT)]
+        command = [ffmpeg, "-y", "-framerate", "2", "-i", str(work / "frame-%04d.png"), "-i", str(audio), "-r", "30", "-c:v", "libx264", "-profile:v", "main", "-level", "4.0", "-pix_fmt", "yuv420p", "-movflags", "+faststart", "-c:a", "aac", "-ar", "48000", "-b:a", "128k", "-shortest", str(OUT)]
         subprocess.run(command, check=True, capture_output=True, text=True)
     print(OUT)
 
