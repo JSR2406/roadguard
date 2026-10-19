@@ -15,6 +15,7 @@ from PIL import Image, ImageDraw, ImageFont
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "demo" / "roadguard-demo.mp4"
+CAPTURES = ROOT / "demo" / "ui-captures"
 
 SLIDES = [
     ("ROADGUARD", "Evidence-first hazard intelligence\nPotholes • animals • route-aware advisory alerts"),
@@ -76,6 +77,19 @@ def make_slides(directory: Path) -> None:
             index += 1
 
 
+def make_ui_frames(directory: Path) -> None:
+    """Turn real captured app screens into a paced video sequence."""
+    captures = sorted(CAPTURES.glob("*.png"))
+    if len(captures) < 9:
+        raise SystemExit("Run python demo/capture_ui_video.py first")
+    index = 0
+    for image_path, duration in zip(captures, DURATIONS):
+        image = Image.open(image_path).convert("RGB").resize((1280, 720))
+        for _ in range(duration * 2):
+            image.save(directory / f"frame-{index:04d}.png")
+            index += 1
+
+
 def create_audio(path: Path) -> None:
     import pyttsx3
 
@@ -96,7 +110,10 @@ def main() -> None:
             raise SystemExit(f"No ffmpeg encoder available: {exc}")
     with tempfile.TemporaryDirectory(prefix="roadguard-demo-") as temp:
         work = Path(temp)
-        make_slides(work)
+        if CAPTURES.exists() and len(list(CAPTURES.glob("*.png"))) >= 9:
+            make_ui_frames(work)
+        else:
+            make_slides(work)
         audio = work / "voiceover.wav"
         create_audio(audio)
         command = [ffmpeg, "-y", "-framerate", "2", "-i", str(work / "frame-%04d.png"), "-i", str(audio), "-c:v", "libx264", "-pix_fmt", "yuv420p", "-c:a", "aac", "-shortest", str(OUT)]

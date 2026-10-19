@@ -11,6 +11,7 @@ __pycache__/
 *.pyc
 graphify-out/cache/
 nul
+demo/ui-captures/
 pilot/external-footage/*.mpg
 pilot/external-footage/*.webm
 pilot/external-footage/*.ogv

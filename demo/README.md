@@ -5,5 +5,10 @@ The accompanying `voiceover-script.md` is a 2–3 minute narration plan for the 
 `create_demo_video.py` can generate a narrated submission video when an FFmpeg encoder is installed. It uses clean project-fact slides and a Windows SAPI voice via `pyttsx3`; it is deliberately aligned with the features actually implemented and does not claim trained-model accuracy or road-safety validation.
 
 ```powershell
+python demo/capture_ui_video.py
 python demo/create_demo_video.py
 ```
+
+The capture step records real screens from the deployed RoadGuard app; the
+video generator then adds the voice-over and motion pacing. If captures are not
+available, it falls back to the fact-based title cards.
