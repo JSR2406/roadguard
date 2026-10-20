@@ -12,7 +12,7 @@ WORKDIR /app
 RUN mkdir /data && chown node:node /data
 COPY --from=build /app/dist ./dist
 COPY package.json ./package.json
-COPY server/index.mjs server/backup.mjs ./server/
+COPY server/index.mjs server/backup.mjs server/camera-contract.mjs ./server/
 COPY src/engine.ts src/types.ts ./src/
 USER node
 VOLUME ["/data"]

@@ -3,7 +3,7 @@
   "1": "compilerOptions",
   "2": "scripts",
   "3": "engine.ts",
-  "4": "LiveWorkspace.tsx",
+  "4": "App.tsx",
   "5": "devDependencies",
   "6": "RoadGuard: feasibility, reuse and implementation validation",
   "7": "Self-hosted pilot deployment",
@@ -27,5 +27,10 @@
   "25": "training.test.py",
   "26": "RoadGuard pothole detector",
   "27": "export.py",
-  "28": "training/README.md"
+  "28": "training/README.md",
+  "35": "RoadGuard demo voice-over script",
+  "36": "create_demo_video.py",
+  "43": "capture_ui_video.py",
+  "44": "demo/README.md",
+  "52": "vite.config.ts"
 }

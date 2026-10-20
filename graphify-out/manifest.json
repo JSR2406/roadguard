@@ -1,8 +1,8 @@
 {
   "package.json": {
-    "mtime": 1792354669.293852,
-    "seen": 1792354816.426509,
-    "ast_hash": "8ba5e26049512b2b91f978c49beadcbe",
+    "mtime": 1792483318.43038,
+    "seen": 1792483646.0157294,
+    "ast_hash": "c20ff1a1e36359bf1f6db49242cc887b",
     "semantic_hash": ""
   },
   "src/App.tsx": {
@@ -42,9 +42,9 @@
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1792357804.1988783,
-    "seen": 1792357962.842292,
-    "ast_hash": "80ff7836c19e4ba1bebd7e91bde50aca",
+    "mtime": 1792483571.0277188,
+    "seen": 1792483646.01668,
+    "ast_hash": "39be74c2b04b5ba10313dc9ff2c0ae44",
     "semantic_hash": ""
   },
   "docs/validation-and-reuse.md": {
@@ -60,8 +60,8 @@
     "semantic_hash": ""
   },
   "reports/pipeline-results.json": {
-    "mtime": 1792350079.2533846,
-    "seen": 1792350390.0643253,
+    "mtime": 1792483618.5011005,
+    "seen": 1792483646.0165172,
     "ast_hash": "40b0b5deb40fb4f384d39c264e203a53",
     "semantic_hash": ""
   },
@@ -96,9 +96,9 @@
     "semantic_hash": ""
   },
   "server/provision.mjs": {
-    "mtime": 1792330346.7192862,
-    "seen": 1792331086.6905916,
-    "ast_hash": "116d20e626a101cf03778f71833f2230",
+    "mtime": 1792483318.5027447,
+    "seen": 1792483646.0165408,
+    "ast_hash": "df705f5c7b8718c4dfd92eee7beb3190",
     "semantic_hash": ""
   },
   "server/simulation-smoke.mjs": {
@@ -198,9 +198,9 @@
     "semantic_hash": ""
   },
   "docs/deployment.md": {
-    "mtime": 1792354723.3045564,
-    "seen": 1792354816.4266186,
-    "ast_hash": "18a8677865b1c8eead702c6f7c6bbbb6",
+    "mtime": 1792483571.0327141,
+    "seen": 1792483646.0166938,
+    "ast_hash": "3a9e871c4d1af2d2c54afd9c19f64592",
     "semantic_hash": ""
   },
   "reports/simulation-preview.html": {
@@ -510,9 +510,9 @@
     "semantic_hash": ""
   },
   "training/train.py": {
-    "mtime": 1792431749.715137,
-    "seen": 1792431778.1467235,
-    "ast_hash": "b2368bdc4d1b94ea26a0a260b7fda8ed",
+    "mtime": 1792432362.0222037,
+    "seen": 1792483646.016645,
+    "ast_hash": "7dfda38dc19bf18bcc236aab07b0c4c5",
     "semantic_hash": ""
   },
   "pilot/external-footage/RDD2022_File_List.txt": {
@@ -545,10 +545,52 @@
     "ast_hash": "80bcb7272b33382bde173a6e65cbb9cf",
     "semantic_hash": ""
   },
-  "training/_smoke-report.json": {
-    "mtime": 1792431772.35554,
-    "seen": 1792431778.1466951,
+  "demo/capture_ui_video.py": {
+    "mtime": 1792442328.154847,
+    "seen": 1792483646.0156865,
+    "ast_hash": "053e5c5bdb1cf4d2f9da223efef341ae",
+    "semantic_hash": ""
+  },
+  "demo/create_demo_video.py": {
+    "mtime": 1792443459.79081,
+    "seen": 1792483646.015691,
+    "ast_hash": "7c4e7c6686e13355c3b21b78c422990e",
+    "semantic_hash": ""
+  },
+  "training/fixture-report.json": {
+    "mtime": 1792432352.0349944,
+    "seen": 1792483646.0166328,
     "ast_hash": "8a725c7b8dc0f86f5ea51d24e360a292",
+    "semantic_hash": ""
+  },
+  "vite.config.ts": {
+    "mtime": 1792437806.4501371,
+    "seen": 1792483646.0166736,
+    "ast_hash": "2a4ca76d40647f6f31398ac0d410f11c",
+    "semantic_hash": ""
+  },
+  ".github/workflows/deploy-pages.yml": {
+    "mtime": 1792444302.278751,
+    "seen": 1792483646.0166767,
+    "ast_hash": "3893e4e38aedb8df0d22a94e1915bcb9",
+    "semantic_hash": ""
+  },
+  "demo/README.md": {
+    "mtime": 1792442328.1686864,
+    "seen": 1792483646.0166857,
+    "ast_hash": "198cf5fe1b51fa58336b6d772800382e",
+    "semantic_hash": ""
+  },
+  "demo/voiceover-script.md": {
+    "mtime": 1792437765.5128477,
+    "seen": 1792483646.0166886,
+    "ast_hash": "60a618cd670d6bd203fbf5ce82d3eddc",
+    "semantic_hash": ""
+  },
+  "demo/roadguard-demo.mp4": {
+    "mtime": 1792443494.3800223,
+    "seen": 1792483646.016762,
+    "ast_hash": "22d67659bcd6f3ab58628ca1f81a5110",
     "semantic_hash": ""
   }
 }

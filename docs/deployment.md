@@ -1,6 +1,6 @@
 # Self-hosted pilot deployment
 
-**Release status: local pilot software tested; production road-safety deployment blocked.** Docker Compose configuration validates, but this machine's Docker Desktop engine cannot start. No container image build, container health check, external TLS deployment or restore inside a container is claimed as tested.
+**Release status: local pilot software tested; production road-safety deployment blocked.** The Docker image build, Compose configuration, container startup and `/healthz` smoke check are verified. External TLS deployment, restore inside a container, sustained load and road-safety validation are not claimed.
 
 The production build and real Node/SQLite server do run locally. The server serves the frontend and API on the same origin. It is single-process/single-node and supports only the three explicit demo road segments. This is not a city-wide service or live navigation system.
 
@@ -28,10 +28,11 @@ No lint script is configured. Dependency audit is a point-in-time advisory check
 
 ## 3. Provision credentials privately
 
-Choose an existing private directory, then run:
+From the repository root on a clean Linux machine, create the ignored secret directory, then run:
 
 ```sh
-npm run provision -- --output /private/roadguard-auth.json
+mkdir -p secrets
+npm run provision -- --output ./secrets/roadguard-auth.json
 ```
 
 The generator refuses to overwrite, creates 256-bit random tokens for reader, authority and three source identities, and never prints them. Restrict Unix permissions/Windows ACLs and grant container UID 1000 read access to the secret as needed. Provision each physical source separately. Do not send credentials through chat, store them in the frontend, or commit them. Open the private file locally only when distributing a role-scoped token to its intended operator/device.
@@ -44,7 +45,7 @@ For rotation/revocation, replace the private configuration and restart the singl
 
 Create a host-local `.env` using `.env.example` as a template. Set:
 
-- `ROADGUARD_AUTH_FILE`: absolute path to the private JSON.
+- `ROADGUARD_AUTH_FILE`: relative or host-appropriate path to the private JSON. The portable `.env.example` uses `./secrets/roadguard-auth.json`.
 - `ROADGUARD_ORIGIN`: exact browser origin, initially `http://localhost:8080`; for a TLS reverse proxy use `https://your-approved-domain.example` without a trailing slash.
 - `ROADGUARD_PORT`: local published port, default 8080.
 - Optional `ROADGUARD_MATCHER_MODULE`: absolute/path-relative ESM module exporting `matcher`, default matcher, or async `createMatcher()` with `resolve(gps, routeRef)`. Use a licensed, versioned production matcher; if omitted, camera ingestion fails closed with 503.
@@ -61,7 +62,7 @@ docker compose up -d
 docker compose ps
 ```
 
-These are **instructions, not evidence of a successful container run in this session**. The image uses non-root Node, no runtime npm dependencies, a read-only root filesystem, dropped Linux capabilities, bounded memory/processes, restricted loopback publishing, a health check and a named data volume.
+The image uses non-root Node, no runtime npm dependencies, a read-only root filesystem, dropped Linux capabilities, bounded memory/processes, restricted loopback publishing, a health check and a named data volume. A local build and health check were verified with the documented flow; use a free host port if `8080` is already occupied.
 
 The video toolchain is deliberately not bundled in the API image. Run it offline or build a separately reviewed inference worker. The API does not download arbitrary footage or execute model uploads.
 
@@ -78,7 +79,7 @@ After building the frontend, set process environment variables and run `npm star
 Unix shell example (replace paths):
 
 ```sh
-ROADGUARD_AUTH_FILE=/private/roadguard-auth.json ROADGUARD_DB_PATH=/private/roadguard.sqlite ROADGUARD_ALLOWED_ORIGIN=http://localhost:8080 HOST=127.0.0.1 PORT=8080 npm start
+ROADGUARD_AUTH_FILE=./secrets/roadguard-auth.json ROADGUARD_DB_PATH=./data/roadguard.sqlite ROADGUARD_ALLOWED_ORIGIN=http://localhost:8080 HOST=127.0.0.1 PORT=8080 npm start
 ```
 
 Open http://localhost:8080 and choose **Server workspace**. Enter role tokens directly in the local page; they are held in memory only and cleared on disconnect or mode switch. Demo evidence is never uploaded automatically. The Vite-only preview at port 5173 serves synthetic mode but has no API proxy; use port 8080 for the server workspace.
@@ -102,7 +103,8 @@ Open http://localhost:8080 and choose **Server workspace**. Enter role tokens di
 Use the included online SQLite backup utility; copying only a live `.sqlite` file can miss WAL data:
 
 ```sh
-node server/backup.mjs --database /data/roadguard.sqlite --output /existing-private-backup-dir/new-snapshot.sqlite
+mkdir -p backups
+node server/backup.mjs --database ./data/roadguard.sqlite --output ./backups/new-snapshot.sqlite
 ```
 
 It refuses overwrite and checks snapshot integrity. For container use, mount an explicitly authorised backup directory or execute this through a controlled maintenance workflow. Scheduling, off-host encryption and retention are operator decisions; none is installed automatically.

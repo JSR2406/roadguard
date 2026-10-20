@@ -2,7 +2,18 @@
 
 RoadGuard now includes a synthetic dashboard, animal/night-aware hazard engine, authenticated persistent Node/SQLite API, separate server-backed UI, reproducible video experiments and Docker/self-hosting configuration.
 
-**Status: locally tested pilot, NOT production road-safety ready.** No real dashcam, CCTV, GPS or trained model weights are connected. Docker runtime verification is blocked by the local engine failing to start. Synthetic success must not be represented as model accuracy or road-safety certification.
+**Status: reproducible software pilot, NOT production road-safety ready.** No real dashcam, CCTV, GPS or trained model weights are connected. Synthetic success must not be represented as model accuracy or road-safety certification.
+
+## Clean-machine submission checklist
+
+- Git repository with commits: this project is published with a `main` branch.
+- Dependency lockfile: `package-lock.json` is committed; use `npm ci`.
+- Runtime pinned: `.nvmrc`, `package.json` `engines`, and the Dockerfile all pin Node `24.14.1`.
+- Container workflow: `Dockerfile` builds the frontend and runs the Node/SQLite server; Compose supplies the private auth secret and persistent volume. The image build and `/healthz` smoke run have been verified with Docker.
+- One test command: `npm test` runs the complete Node test suite. The optional UI suite is `npm run test:ui`.
+- Setup/run/test documentation: the commands below and `docs/deployment.md` are portable Linux/macOS instructions.
+- Configuration only in `.env.example`: no credentials are committed; `secrets/`, `.env`, databases and generated data are ignored.
+- Portable paths: repository commands use relative paths; replace only deployment-host paths when mounting private secrets or backups.
 
 ## Open locally
 
@@ -11,11 +22,30 @@ Synthetic preview: http://localhost:5173 (when Vite is running).
 The built frontend and persistent server have also been started locally at http://localhost:8080. Use **Synthetic demo** without credentials, or **Server workspace** for the isolated authenticated store. Server evidence starts empty. Do not paste credentials into chat.
 
 ```sh
+nvm install 24.14.1
+nvm use 24.14.1
 npm ci
 npm run dev -- --port 5173
 ```
 
-Requires Node **24.14.1** for the backend's built-in SQLite/TypeScript support. Follow [deployment instructions](docs/deployment.md) to provision private credentials and start your own persistent server or Docker environment. A Vite-only preview has no backend proxy.
+Requires Node **24.14.1** for the backend's built-in SQLite/TypeScript support. A Vite-only preview has no backend proxy. Follow [deployment instructions](docs/deployment.md) to provision private credentials and start the persistent server or Docker environment.
+
+## Clean Linux setup and run
+
+The following commands assume a fresh checkout and a running Docker Engine. They use only repository-relative paths and do not place secrets in Git:
+
+```sh
+cp .env.example .env
+mkdir -p secrets
+npm run provision -- --output ./secrets/roadguard-auth.json
+npm test
+npm run build
+docker compose --env-file .env config --quiet
+docker compose --env-file .env up --build -d
+curl --fail http://127.0.0.1:8080/healthz
+```
+
+Open `http://localhost:8080` for the server-backed workspace. For the browser-only synthetic preview, run `npm run dev -- --host 127.0.0.1 --port 5173` instead. To stop the container, run `docker compose --env-file .env down`.
 
 ## What is implemented
 
@@ -30,7 +60,7 @@ Requires Node **24.14.1** for the backend's built-in SQLite/TypeScript support. 
 - Browser GPS watch and OpenStreetMap position-link preview are available in the server workspace; browser camera enumeration is a capability check only, not vehicle-camera access.
 - SQLite transactions, append-only event cursor, quality-rejection receipts, role checks, bounded HTTP requests/rate limits, origin checks, safe static serving, security headers, graceful shutdown and online backup utility.
 - Authenticated NDJSON camera/GPS ingestion endpoint with injected route-matcher boundary, duplicate-frame handling and safe operational metrics (`/api/metrics`).
-- Dockerfile and hardened loopback-only Compose configuration. **Configuration checked; container build/run not verified.**
+- Dockerfile and hardened loopback-only Compose configuration. Container build and health-check smoke run are verified; production TLS, retention and load gates remain separate.
 
 ## Try the synthetic workflow
 

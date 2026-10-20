@@ -4,7 +4,7 @@ import path from 'node:path';
 
 const args = process.argv.slice(2);
 if (args.length !== 2 || args[0] !== '--output') {
-  console.error('Usage: npm run provision -- --output /private/existing-parent/roadguard-auth.json');
+  console.error('Usage: npm run provision -- --output ./secrets/roadguard-auth.json');
   process.exitCode = 1;
 } else {
   try {

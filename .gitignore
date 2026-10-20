@@ -10,6 +10,8 @@ auth.json
 __pycache__/
 *.pyc
 graphify-out/cache/
+vision/.venv/
+equity-research/
 nul
 demo/ui-captures/
 pilot/external-footage/*.mpg
