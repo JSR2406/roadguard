@@ -26,6 +26,11 @@ jobs:
       - run: npm ci
       - run: npm run build
       - run: cp demo/roadguard-demo.mp4 dist/roadguard-demo.mp4
+      - name: Build Commerce Studio static demo
+        working-directory: commerce-studio
+        run: npm ci && npm run build
+      - name: Add Commerce Studio to Pages artifact
+        run: mkdir -p dist/commerce-studio && cp -R commerce-studio/dist/. dist/commerce-studio/
       - uses: actions/configure-pages@v5
         with:
           enablement: true

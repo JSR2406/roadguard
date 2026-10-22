@@ -1,0 +1,62 @@
+.server-workspace .server-fieldset { min-width: 0; margin: 0; padding: 0; border: 0; }
+.server-workspace button:disabled { opacity: .55; cursor: not-allowed; }
+.server-workspace button:focus-visible, .server-workspace summary:focus-visible { outline: 3px solid #6b8fe5; outline-offset: 3px; }
+.server-workspace .server-auth-switch { margin-top: 20px; }
+.server-workspace .server-profile-details summary { padding: 12px 0; color: #3159c9; font-size: 14px; font-weight: 750; cursor: pointer; }
+.server-workspace .server-help { margin: 8px 0 16px; color: #52617a; font-size: 12px; line-height: 1.65; overflow-wrap: anywhere; }
+.server-workspace .server-profile-header { overflow-wrap: anywhere; }
+.server-workspace .server-commerce { margin-top: 24px; }
+.server-workspace .server-section-header { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 24px; }
+.server-workspace .server-section-header .server-kicker { margin-bottom: 8px; }
+.server-workspace .server-commerce h2 { display: flex; align-items: center; gap: 9px; margin: 0 0 18px; font-size: 22px; letter-spacing: -.025em; }
+.server-workspace .server-commerce h3 { margin: 0; font-size: 14px; line-height: 1.5; }
+.server-workspace .server-commerce-content { display: grid; gap: 36px; }
+.server-workspace .server-commerce-columns { display: grid; grid-template-columns: minmax(220px, .85fr) minmax(0, 1.15fr); gap: 24px; align-items: start; }
+.server-workspace .server-inset { padding: 20px; border: 1px solid #dce3ec; border-radius: 12px; background: #f8fafc; }
+.server-workspace .server-catalog-filters { display: grid; grid-template-columns: minmax(0, 1fr) 120px; gap: 10px; margin-bottom: 16px; }
+.server-workspace .server-product-list, .server-workspace .server-quote-list { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
+.server-workspace .server-product-list > li { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; padding: 15px 0; border-bottom: 1px solid #dce3ec; }
+.server-workspace .server-product-list > li > div { min-width: 0; overflow-wrap: anywhere; }
+.server-workspace .server-product-list .server-help { margin: 3px 0 8px; }
+.server-workspace .server-product-list .server-logout { flex: 0 0 auto; }
+.server-workspace .server-product-description { margin: 0 0 8px; color: #52617a; font-size: 12px; line-height: 1.6; white-space: pre-wrap; }
+.server-workspace .server-product-price { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; margin: 0; font-size: 13px; font-weight: 750; }
+.server-workspace .server-status { padding: 3px 7px; border: 1px solid #dce3ec; border-radius: 5px; color: #40506b; background: #f4f6f9; font-size: 10px; font-weight: 650; text-transform: uppercase; }
+.server-workspace .server-empty { padding: 20px; border: 1px dashed #b7c3d4; border-radius: 10px; color: #52617a; font-size: 13px; line-height: 1.6; }
+.server-workspace .server-confirm { margin-top: 16px; padding: 18px; border: 1px solid #c99853; border-radius: 10px; background: #fff9ef; }
+.server-workspace .server-confirm p { font-size: 12px; line-height: 1.6; }
+.server-workspace .server-action-row { display: flex; gap: 8px; flex-wrap: wrap; }
+.server-workspace .server-quotes { padding-top: 28px; border-top: 1px solid #dce3ec; }
+.server-workspace .server-quote-line { display: grid; grid-template-columns: minmax(0, 1fr) 90px auto; gap: 12px; align-items: end; }
+.server-workspace .server-quote-line .server-logout { min-height: 42px; justify-content: center; }
+.server-workspace .server-rate-fields { display: grid; grid-template-columns: 1fr 1fr 1.5fr; gap: 12px; }
+.server-workspace .server-add-line, .server-workspace .server-save-quote { justify-self: start; }
+.server-workspace .server-saved-heading { margin: 28px 0 14px !important; }
+.server-workspace .server-quote-button { display: flex; width: 100%; align-items: center; justify-content: space-between; gap: 14px; padding: 16px; border: 1px solid #dce3ec; border-radius: 10px; color: #24334c; background: #fff; text-align: left; font-size: 12px; cursor: pointer; }
+.server-workspace .server-quote-button[aria-pressed="true"] { border-color: #3159c9; background: #f0f4ff; }
+.server-workspace .server-quote-button small { display: block; margin-top: 5px; color: #52617a; line-height: 1.5; }
+.server-workspace .server-quote-detail { margin-top: 26px; padding-top: 24px; border-top: 1px solid #dce3ec; }
+.server-workspace .server-table-scroll { overflow-x: auto; }
+.server-workspace .server-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+.server-workspace .server-table caption { margin: 0 0 12px; color: #52617a; text-align: left; font-size: 12px; }
+.server-workspace .server-table th, .server-workspace .server-table td { padding: 12px; border-bottom: 1px solid #dce3ec; text-align: left; vertical-align: top; }
+.server-workspace .server-table th { font-weight: 750; }
+.server-workspace .server-table td { white-space: nowrap; }
+.server-workspace .server-table small { display: block; margin-top: 4px; color: #52617a; font-weight: 400; }
+.server-workspace .server-totals { display: grid; gap: 12px; max-width: 400px; margin: 24px 0 0 auto; font-size: 13px; }
+.server-workspace .server-totals > div { display: flex; justify-content: space-between; gap: 16px; }
+.server-workspace .server-totals dd { margin: 0; text-align: right; }
+.server-workspace .server-grand-total { padding-top: 14px; border-top: 1px solid #dce3ec; font-size: 16px; font-weight: 800; }
+@media (max-width: 720px) {
+  .server-workspace .server-commerce-columns { grid-template-columns: 1fr; }
+  .server-workspace .server-section-header { align-items: flex-start; flex-direction: column; }
+  .server-workspace .server-rate-fields { grid-template-columns: 1fr; }
+  .server-workspace .server-quote-line { grid-template-columns: minmax(0, 1fr) 82px; }
+  .server-workspace .server-quote-line > .server-field:first-child { grid-column: 1 / -1; }
+  .server-workspace .server-quote-button { align-items: flex-start; flex-wrap: wrap; }
+}
+@media (max-width: 420px) {
+  .server-workspace .server-inset { padding: 14px; }
+  .server-workspace .server-catalog-filters { grid-template-columns: 1fr; }
+  .server-workspace .server-product-list > li { flex-direction: column; }
+}
