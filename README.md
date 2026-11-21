@@ -1,8 +1,18 @@
 # RoadGuard — pothole and animal-hazard pilot
 
-RoadGuard now includes a synthetic dashboard, animal/night-aware hazard engine, authenticated persistent Node/SQLite API, separate server-backed UI, reproducible video experiments and Docker/self-hosting configuration.
+RoadGuard is a road-hazard software pilot. Its Vite dashboard and simulation demonstrate pothole and animal-related hazard workflows. A separate persistent Node.js/SQLite API supports server-backed review.
 
 **Status: reproducible software pilot, NOT production road-safety ready.** No real dashcam, CCTV, GPS or trained model weights are connected. Synthetic success must not be represented as model accuracy or road-safety certification.
+
+## Where to start
+
+| Goal | Path |
+| --- | --- |
+| Explore the dashboard | [src](src) |
+| Inspect the persistent API | [server](server) |
+| Work with synthetic scenarios | [sim](sim) |
+| Evaluate the video pipeline | [vision](vision) |
+| Prepare pilot inputs | [pilot](pilot) |
 
 ## Clean-machine submission checklist
 
